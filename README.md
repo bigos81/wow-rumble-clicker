@@ -19,7 +19,9 @@ https://play.google.com/store/apps/details?id=com.blizzard.arc
 ## Files
 
 **rc-loop.bat** - runs quests until quests are out, then runs pvp. In case of errors loops back again and logs some simple timestamps and events to log.txt
+
 **rc-pvp.py** - runs loop for pvp (chooses weakest - leftmost hero) not to spoil your pvp score, expect winning like 1/6th of the time
+
 **rc-quest.py** - runs loop for quests (be sure to set your strongest hero in the army) - expect 60% win rate
 
 ## Setup

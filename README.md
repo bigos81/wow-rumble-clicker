@@ -14,8 +14,7 @@ Works with LDPlayer (https://www.ldplayer.net/) setup in this resolution and mak
 
 For other resolution you'd have to re-do all the images i'm searching for in resources/ folder
 
-Small demo of the working script:
-![image](https://imgur.com/JtSDwgD.gif)
+Small demo of the working script: https://imgur.com/JtSDwgD.gif
 
 Really, don't expect much, it's coded in couple of hours scripts to just click on the game as I thought the quests are
 unlimited and it's free experience which turns out not to be the case. You can play 20 a day and you should actually

@@ -23,6 +23,7 @@ def main():
     stats = {}
     time_start = datetime.datetime.now()
     last = 'last'
+    msg_len = 0
     while True:
         if no_more_quests():
             return 666
@@ -58,9 +59,13 @@ def main():
         errors = get_stat('ok.png', stats)
         big = get_stat('claim-big', stats)
 
-        print(f'({str(in_game)[0]}) effi: {effi:.2f}% played: {played} elapsed: {pretty_print(elapsed)} '
-              f'cl: {claims} lvl: {level_ups} big: {big} e: {errors} '
-              f'btn: {btn}                                   ', end='\r')
+        status_message = (f"({str(in_game)[0]}) effi: {effi:.2f}% played: {played} elapsed: {pretty_print(elapsed)} "
+                          f"cl: {claims} lvl: {level_ups} big: {big} e: {errors} btn: {btn}")
+        current_len = len(status_message)
+        msg_len = max(msg_len, current_len)
+        margin = msg_len - current_len
+        spaces = ' ' * margin
+        print(f'{status_message}{spaces}', end="\r")
 
         last = btn
 

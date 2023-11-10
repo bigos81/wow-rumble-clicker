@@ -101,7 +101,7 @@ def find_gold():
     cnt = 0
     while True:
         cnt = cnt + 1
-        i = random.randint(2, 4)
+        i = random.randint(2, 5)
         loc = imagesearch(f'resources/{i}_gold.png')
         if found(loc):
             return loc

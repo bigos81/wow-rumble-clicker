@@ -8,11 +8,12 @@ https://play.google.com/store/apps/details?id=com.blizzard.arc
 # Table of Contents  
 1. [Files](#Files)
 2. [Setup](#Setup)
-3. [Debugging](#Debugging)
+3. [How to run](#How-to-run)
+4. [Debugging](#Debugging)
    1. [Explanation of output](#Explanation-of-output)
-4. [Demo](#Demo)
-5. [Disclaimer](#Disclaimer)
-6. [Still Reading?](#Still-Reading)
+5. [Demo](#Demo)
+6. [Disclaimer](#Disclaimer)
+7. [Still Reading?](#Still-Reading)
 
 ## Files
 
@@ -25,6 +26,23 @@ Works with LDPlayer (https://www.ldplayer.net/) setup in this resolution and mak
 ![image](https://github.com/bigos81/wow-rumble-clicker/assets/1384214/640c0a0c-71ef-43a3-8dd7-5cbc63550c63)
 
 For other resolution you'd have to re-do all the images I'm searching for in `resources/` folder
+
+## How to run
+Prerequisites
+- Python 3.9+ installed on your machine
+- LDPlayer with the WoW Rumble game installed set to resolution mentioned above
+- Installed python dependencies for script `pip install -r requirements.txt` (you need to do this only once) 
+
+Steps to run:
+1. Open the game in LDPlayer and place the game window on your primary display in case of multi-monitor setup
+2. Open any shell (e.g. cmd, PowerShell, cygwin, etc.)
+3. Make sure your shell window is not obscuring the game window
+4. In shell navigate to script location
+5. Run the script `python ./rc-quest` for quests, `python ./rc-pvp` for pvp, or the infinite loop script `rc-loop.bat`
+6. Yep, your mouse is totally taken over now, so you can do two things:
+   1. Just leave the PC alone and let it run
+   2. Run the whole shebang in virtual machine while still using your PC that hosts it
+7. When done just `ctrl+c` from the shell (keep in mind it's not going to be focused)
 
 ## Debugging
 Well if it does not work for you and all you see is this on console:

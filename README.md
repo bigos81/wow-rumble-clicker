@@ -50,7 +50,7 @@ btn - last found graphics from resources - 'none' means none was found, which is
 
 ## Demo
 Small demo of the working script:  
-<a href="https://imgur.com/JtSDwgD"><img src="https://imgur.com/JtSDwgD.gif" style="height: 300px"/></a>
+<a href="https://imgur.com/JtSDwgD"><img src="https://i.imgur.com/JtSDwgD.mp4" style="height: 300px"/></a>
 
 ## Disclaimer
 Really, don't expect much, it's coded in a couple of hours scripts to just click on the game as I thought the quests are

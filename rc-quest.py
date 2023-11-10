@@ -13,7 +13,7 @@ IMAGES_PRIO_SORTED = [
     'resources/play.png',  # play
     'resources/play2.png',  # also play
     'resources/start.png',  # start
-    'resources/quest.png',  # quest
+    'resources/quest2.png',  # quest
     'resources/questing.png',  # quest
     'resources/back.png'  # back
 ]
@@ -60,7 +60,7 @@ def main():
 
         print(f'({str(in_game)[0]}) effi: {effi:.2f}% played: {played} elapsed: {pretty_print(elapsed)} '
               f'cl: {claims} lvl: {level_ups} big: {big} e: {errors} '
-              f'btn: {btn}', end='\r')
+              f'btn: {btn}                                   ', end='\r')
 
         last = btn
 

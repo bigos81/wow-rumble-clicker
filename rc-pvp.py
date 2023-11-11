@@ -1,11 +1,10 @@
 import datetime
-import os
-
+from common import *
 from imagesearch import *
 
 IMAGES_PRIO_SORTED = [
     'resources/pvp-start.png',  # rumble
-    'resources/victory.png', # lol win
+    'resources/victory.png',  # lol win
     'resources/cont.png',  # continue
     'resources/ok.png',  # error
     'resources/lvlup.png',  # level up
@@ -15,13 +14,16 @@ IMAGES_PRIO_SORTED = [
 
 
 def main():
+    if not validate_resources(IMAGES_PRIO_SORTED):
+        return -1
+
     stats = {}
     time_start = datetime.datetime.now()
     last = 'last'
     while True:
         wait_random()
         elapsed = datetime.datetime.now() - time_start
-        res = find_prio_click()
+        res = find_prio_click(IMAGES_PRIO_SORTED)
         btn = 'none'
         if 'btn' in res.keys():
             btn = res['btn']
@@ -31,7 +33,6 @@ def main():
         if in_game:
             drag()
 
-        played = 0
         if 'loc' in res.keys():
             if btn in stats.keys():
                 if last != btn:
@@ -75,10 +76,6 @@ def pretty_print(elapsed):
     return str(datetime.timedelta(seconds=elapsed.total_seconds()))
 
 
-def found(location):
-    return location[0] > 0 and location[1] > 0
-
-
 def in_active_game():
     return imagesearch('resources/game_border.png')[0] > 0
 
@@ -98,15 +95,6 @@ def find_gold():
             return loc
         if cnt > 100:
             return [10, 10]
-
-
-def find_prio_click():
-    for img in IMAGES_PRIO_SORTED:
-        location = imagesearch(img)
-        if found(location):
-            image = os.path.basename(img)
-            return {'loc': location, 'btn': image}
-    return {}
 
 
 def drag():

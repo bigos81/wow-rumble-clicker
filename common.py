@@ -1,6 +1,6 @@
 import os
 
-from imagesearch import *
+from python_imagesearch.imagesearch import imagesearch
 
 
 def found(location):

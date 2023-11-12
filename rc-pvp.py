@@ -1,6 +1,10 @@
 import datetime
+import random
+import time
+
+import pyautogui
+
 from common import *
-from imagesearch import *
 
 IMAGES_PRIO_SORTED = [
     'resources/pvp_start.png',  # rumble

@@ -1,7 +1,12 @@
 import datetime
+import random
+import time
+import pyautogui
 
 from common import *
-from imagesearch import *
+
+
+from python_imagesearch.imagesearch import imagesearch
 
 IMAGES_PRIO_SORTED = [
     'resources/ok.png',  # error

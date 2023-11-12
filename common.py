@@ -19,6 +19,6 @@ def find_prio_click(image_priority_list):
 def validate_resources(image_priority_list) -> bool:
     for img in image_priority_list:
         if not os.path.exists(img):
-            print(f'Resource: {img} not found')
+            print(f'Resource: {os.path.abspath(img)} not found')
             return False
     return True

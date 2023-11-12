@@ -3,12 +3,12 @@ from common import *
 from imagesearch import *
 
 IMAGES_PRIO_SORTED = [
-    'resources/pvp-start.png',  # rumble
+    'resources/pvp_start.png',  # rumble
     'resources/victory.png',  # lol win
     'resources/cont.png',  # continue
     'resources/ok.png',  # error
     'resources/lvlup.png',  # level up
-    'resources/claim-big.png',  # claim big lvlup
+    'resources/claim_big.png',  # claim big lvlup
     'resources/pvp.png',  # rumble
 ]
 
@@ -40,7 +40,7 @@ def main():
             else:
                 stats[btn] = 1
 
-            if btn == 'pvp-start.png':
+            if btn == 'pvp_start.png':
                 rnd = random.randint(0, 2)
                 offset = [0, 0, 0]
                 location = [res['loc'][0] - offset[rnd], res['loc'][1] - 200]
@@ -50,7 +50,7 @@ def main():
             else:
                 click(res['loc'])
 
-        played = get_stat('pvp-start.png', stats)
+        played = get_stat('pvp_start.png', stats)
         level_ups = get_stat('lvlup.png', stats)
         errors = get_stat('ok.png', stats)
         win = get_stat('victory.png', stats)
@@ -63,7 +63,7 @@ def main():
 
 
 def no_more_quests():
-    return imagesearch('resources/quest-block.png')[0] > 0
+    return imagesearch('resources/quest_block.png')[0] > 0
 
 
 def get_stat(key, stats):

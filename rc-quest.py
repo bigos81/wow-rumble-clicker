@@ -6,7 +6,7 @@ from imagesearch import *
 IMAGES_PRIO_SORTED = [
     'resources/ok.png',  # error
     'resources/lvlup.png',  # level up
-    'resources/claim-big.png',  # claim big lvlup
+    'resources/claim_big.png',  # claim big lvlup
     'resources/claim.png',  # claim xp
     'resources/cont.png',  # continue
     'resources/try.png',  # try again
@@ -74,7 +74,7 @@ def main():
 
 
 def no_more_quests():
-    return imagesearch('resources/quest-block.png')[0] > 0
+    return imagesearch('resources/quest_block.png')[0] > 0
 
 
 def get_stat(key, stats):

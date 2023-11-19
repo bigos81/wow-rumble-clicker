@@ -38,7 +38,7 @@ Steps to run:
 2. Open any shell (e.g. cmd, PowerShell, cygwin, etc.)
 3. Make sure your shell window is not obscuring the game window
 4. In shell navigate to script location
-5. Run the script `python ./rc-quest` for quests, `python ./rc-pvp` for pvp, or the infinite loop script `rc-loop.bat`
+5. Run the script `python ./rc-quest.py` for quests, `python ./rc-pvp.py` for pvp, or the infinite loop script `rc-loop.bat`
 6. Yep, your mouse is totally taken over now, so you can do two things:
    1. Just leave the PC alone and let it run
    2. Run the whole shebang in virtual machine while still using your PC that hosts it
